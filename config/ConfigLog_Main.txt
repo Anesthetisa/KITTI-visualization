@@ -1,0 +1,55 @@
+log4cplus.rootLogger=TRACE, ALL_MSGS, TRACE_MSGS, DEBUG_INFO_MSGS, ERROR_MSGS, FATAL_MSGS, RemoteServer
+
+log4cplus.appender.ALL_MSGS=log4cplus::RollingFileAppender
+log4cplus.appender.ALL_MSGS.File=d:\MainLog\all_msgs.log
+log4cplus.appender.ALL_MSGS.layout=log4cplus::PatternLayout
+log4cplus.appender.ALL_MSGS.layout.ConversionPattern=%D %c %-5p [%t] %3x - %m%n
+log4cplus.appender.ALL_MSGS.MaxFileSize=30000KB
+log4cplus.appender.ALL_MSGS.MaxBackupIndex=10
+
+log4cplus.appender.TRACE_MSGS=log4cplus::RollingFileAppender
+log4cplus.appender.TRACE_MSGS.File=d:\MainLog\trace_msgs.log
+log4cplus.appender.TRACE_MSGS.layout.ConversionPattern=%D %c %-5p [%t] %3x - %m%n
+log4cplus.appender.TRACE_MSGS.layout=log4cplus::PatternLayout
+log4cplus.appender.TRACE_MSGS.filters.1=log4cplus::spi::LogLevelMatchFilter
+log4cplus.appender.TRACE_MSGS.filters.1.LogLevelToMatch=TRACE
+log4cplus.appender.TRACE_MSGS.filters.1.AcceptOnMatch=true
+log4cplus.appender.TRACE_MSGS.filters.2=log4cplus::spi::DenyAllFilter
+log4cplus.appender.TRACE_MSGS.MaxFileSize=15000KB
+log4cplus.appender.TRACE_MSGS.MaxBackupIndex=10
+
+log4cplus.appender.DEBUG_INFO_MSGS=log4cplus::RollingFileAppender
+log4cplus.appender.DEBUG_INFO_MSGS.File=d:\MainLog\debug_info_msgs.log
+log4cplus.appender.DEBUG_INFO_MSGS.layout.ConversionPattern=[%l]|%D %c %-5p [%t] %3x - %m%n
+log4cplus.appender.DEBUG_INFO_MSGS.layout=log4cplus::PatternLayout
+log4cplus.appender.DEBUG_INFO_MSGS.filters.1=log4cplus::spi::LogLevelRangeFilter
+log4cplus.appender.DEBUG_INFO_MSGS.filters.1.LogLevelMin=DEBUG
+log4cplus.appender.DEBUG_INFO_MSGS.filters.1.LogLevelMax=INFO
+log4cplus.appender.DEBUG_INFO_MSGS.filters.1.AcceptOnMatch=true
+log4cplus.appender.DEBUG_INFO_MSGS.filters.2=log4cplus::spi::DenyAllFilter
+log4cplus.appender.DEBUG_INFO_MSGS.MaxFileSize=10000KB
+log4cplus.appender.DEBUG_INFO_MSGS.MaxBackupIndex=10
+
+log4cplus.appender.ERROR_MSGS=log4cplus::RollingFileAppender
+log4cplus.appender.ERROR_MSGS.File=d:\MainLog\error_msgs.log
+log4cplus.appender.ERROR_MSGS.layout.ConversionPattern=[%l]|%D %c %-5p [%t] %3x - %m%n
+log4cplus.appender.ERROR_MSGS.layout=log4cplus::PatternLayout
+log4cplus.appender.ERROR_MSGS.filters.1=log4cplus::spi::LogLevelMatchFilter
+log4cplus.appender.ERROR_MSGS.filters.1.LogLevelToMatch=ERROR
+log4cplus.appender.ERROR_MSGS.filters.1.AcceptOnMatch=true
+log4cplus.appender.ERROR_MSGS.filters.2=log4cplus::spi::DenyAllFilter
+log4cplus.appender.ERROR_MSGS.MaxFileSize=10000KB
+log4cplus.appender.ERROR_MSGS.MaxBackupIndex=10
+
+log4cplus.appender.FATAL_MSGS=log4cplus::RollingFileAppender
+log4cplus.appender.FATAL_MSGS.File=d:\MainLog\fatal_msgs.log
+log4cplus.appender.FATAL_MSGS.layout.ConversionPattern=[%l]|%D %c %-5p [%t] %3x - %m%n
+log4cplus.appender.FATAL_MSGS.layout=log4cplus::PatternLayout
+log4cplus.appender.FATAL_MSGS.filters.1=log4cplus::spi::LogLevelMatchFilter
+log4cplus.appender.FATAL_MSGS.filters.1.LogLevelToMatch=FATAL
+log4cplus.appender.FATAL_MSGS.filters.1.AcceptOnMatch=true
+log4cplus.appender.FATAL_MSGS.filters.2=log4cplus::spi::DenyAllFilter
+log4cplus.appender.FATAL_MSGS.MaxFileSize=10000KB
+log4cplus.appender.FATAL_MSGS.MaxBackupIndex=10
+
+
