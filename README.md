@@ -1,0 +1,3 @@
+# KITTI-visualization
+
+适用于KITTI数据集的可视化软件，支持exe直接启动，选定对应KITTI数据集根目录及label路径后可直接显示所有kitti数据
